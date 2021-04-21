@@ -12,6 +12,7 @@
       src="https://kit.fontawesome.com/5e8b469dd2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/style.js"></script>
   </head>
   <body>
     <header class="container">
@@ -19,21 +20,24 @@
         <div id="logo">
           <a href="#"><img src="./assets/img/logo.svg" alt="Tripadvisor" /></a>
         </div>
-        <input
-          type="text"
-          type="search"
-          class="search"
-          placeholder="Rechercher"
-        />
+        <div class="search-group">
+          <input
+            type="text"
+            type="search"
+            class="search"
+            placeholder="Rechercher"
+          />
+          <i class="fas fa-search"></i>
+        </div>
         <div class="links">
           <a href="#" class="link">
             <i class="fas fa-pen"></i> <span>Avis</span>
           </a>
           <a href="#" class="link">
-            <i class="fas fa-bell"></i> <span>Alertes</span>
+            <i class="far fa-bell"></i> <span>Alertes</span>
           </a>
           <a href="#" class="link">
-            <i class="fas fa-heart"></i> <span>Favoris</span>
+            <i class="far fa-heart"></i> <span>Favoris</span>
           </a>
           <a href="#" class="link blackbutton"> <span>Connectez-vous</span></a>
         </div>
@@ -44,31 +48,31 @@
         <span>Explorer </span><span class="black">Paris</span>
       </h1>
       <nav id="activities">
-        <a href="" class="activity">
+        <a href="#" class="activity">
           <div>Hôtels</div>
           <i class="fas fa-hotel"></i>
         </a>
-        <a href="" class="activity">
+        <a href="#" class="activity">
           <div>Locations de vacances</div>
           <i class="fas fa-key"></i>
         </a>
-        <a href="" class="activity">
+        <a href="#" class="activity">
           <div>Activités</div>
           <i class="fas fa-hiking"></i>
         </a>
-        <a href="" class="activity">
+        <a href="#" class="activity">
           <div>Restaurants</div>
           <i class="fas fa-utensils"></i>
         </a>
-        <a href="" class="activity">
+        <a href="#" class="activity">
           <div>Forum de voyages</div>
           <i class="fas fa-user-friends"></i>
         </a>
-        <a href="" class="activity">
+        <a href="#" class="activity">
           <div>Vols</div>
           <i class="fas fa-plane"></i>
         </a>
-        <a href="" class="activity">
+        <a href="#" class="activity">
           <div>Plus</div>
           <i class="fas fa-ellipsis-h"></i>
         </a>
@@ -126,7 +130,7 @@
                 Créez un voyage pour enregistrer et organiser toutes vos idées
                 et les visualiser sur une carte.
               </p>
-              <a href="" class="btn link blackbutton">Créer un voyage</a>
+              <a href="#" class="btn link blackbutton">Créer un voyage</a>
             </div>
             <div class="picture">
               <img src="./assets/img/map.png" alt="" />
@@ -134,7 +138,298 @@
           </div>
         </div>
       </section>
+      <section>
+        <h2>Paris : les immanquables</h2>
+        <div class="list-do">
+          <div class="card">
+            <h3>Se divertir</h3>
+            <p>
+              Des lieux à voir, des rues à explorer et des expériences
+              emblématiques à Paris.
+            </p>
+            <a href="#">Tout afficher</a>
+          </div>
+          <div class="elements">
+            <div class="card">
+              <a href="#" class="plain">
+                <img src="./assets/img/divertir/eiffel.jpg" alt="Tour Eiffel" />
+                <div class="title">Tour Eiffel</div>
+                <div class="notation" data-note="4.5">140 249</div>
+                <div class="category">
+                  Tours et plateformes d'observation, Monuments & Points
+                  d'intérêt
+                </div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/louvre.jpg"
+                  alt="Musée du Louvre"
+                />
+                <div class="title">Musée du Louvre</div>
+                <div class="notation" data-note="4.5">100 864</div>
+                <div class="category">
+                  Bâtiments architecturaux, Musées d'art
+                </div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/triomphe.jpg"
+                  alt="Arc de Triomphe"
+                />
+                <div class="title">Arc de Triomphe</div>
+                <div class="notation" data-note="4.5">45 099</div>
+                <div class="category">
+                  Bâtiments architecturaux, Sites historiques
+                </div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img src="./assets/img/divertir/rodin.jpg" alt="Musée Rodin" />
+                <div class="title">Musée Rodin</div>
+                <div class="notation" data-note="4.5">12 456</div>
+                <div class="category">Musée spécialisés</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/notre-dame.jpg"
+                  alt="Cathédrale Notre Dame"
+                />
+                <div class="title">Cathédrale Notre Dame</div>
+                <div class="notation" data-note="4.5">71 250</div>
+                <div class="category">
+                  Bâtiments architecturaux, Sites historiques
+                </div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/shakespeare.jpg"
+                  alt="Librairie Shakespeare and Company"
+                />
+                <div class="title">Librairie Shakespeare and Company</div>
+                <div class="notation" data-note="4.5">3 920</div>
+                <div class="category">Bibliothèque, Grands Magasins</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/orsay.jpg"
+                  alt="Musée d'Orsay"
+                />
+                <div class="title">Musée d'Orsay</div>
+                <div class="notation" data-note="4.5">65 171</div>
+                <div class="category">Category</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/puces.jpg"
+                  alt="Marché aux Puces de St Ouen"
+                />
+                <div class="title">Marché aux Puces de St Ouen</div>
+                <div class="notation" data-note="4">864</div>
+                <div class="category">
+                  Antiquaires, Marchés aux puces & Marché de rues
+                </div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/basilica.jpg"
+                  alt="Basilique du Sacré Coeur"
+                />
+                <div class="title">Basilique du Sacré Coeur</div>
+                <div class="notation" data-note="4.5">38 637</div>
+                <div class="category">Eglises et cathédrale</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" class="plain">
+                <img
+                  src="./assets/img/divertir/tuileries.jpg"
+                  alt="Jardin des Tuileries"
+                />
+                <div class="title">Jardin des Tuileries</div>
+                <div class="notation" data-note="4.5">7 253</div>
+                <div class="category">Jardins</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="guide">
+        <h2>Guide de voyageurs</h2>
+        <div class="elements">
+          <div class="card">
+            <a href="#" class="plain">
+              <img
+                src="./assets/img/articles/catacombes.jpg"
+                alt="Catacombes"
+              />
+              <div class="title">
+                Top 10 des choses à faire ou à voir dans le 14ème
+              </div>
+              <div class="nb">10 articles</div>
+            </a>
+            <div class="by">
+              <a href="#">
+                <img src="./assets/img/icons/topito.jpg" alt="Topito" />
+              </a>
+              Par <a href="#">Topito</a>
+            </div>
+          </div>
+          <div class="card">
+            <a href="#" class="plain">
+              <img
+                src="./assets/img/articles/montmartre.jpg"
+                alt="Montmartre"
+              />
+              <div class="title">
+                Best summer things to do in Paris | Eatwith
+              </div>
+              <div class="nb">36 articles</div>
+            </a>
+            <div class="by">
+              <a href="#">
+                <img src="./assets/img/icons/eatwith.jpg" alt="Eatwith" />
+              </a>
+              Par <a href="#">Eatwith</a>
+            </div>
+          </div>
+          <div class="card">
+            <a href="#" class="plain">
+              <img
+                src="./assets/img/articles/musee-grevin.jpg"
+                alt="Musée Grévin"
+              />
+              <div class="title">
+                Les 10 monuments et musées de Paris à faire.
+              </div>
+              <div class="nb">10 articles</div>
+            </a>
+            <div class="by">
+              <a href="#">
+                <img src="./assets/img/icons/topito.jpg" alt="Topito" />
+              </a>
+              Par <a href="#">Topito</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="forum">
+        <h2>Dans les forums</h2>
+        <a href="#" class="location">Tout afficher</a>
+        <div class="elements">
+          <div class="card">
+            <a href="#">Hôtel avec cuisinette dans Paris même.</a>
+            <div class="from">
+              <img src="./assets/img/forum/1.jpg" alt="1" />
+              Par <a href="#">Lise T</a> • 3 réponses
+            </div>
+          </div>
+          <div class="card">
+            <a href="#">Paris Attitude</a>
+            <div class="from">
+              <img src="./assets/img/forum/2.jpg" alt="2" />
+              Par <a href="#">Alla R</a> • 1 réponse
+            </div>
+          </div>
+          <div class="card">
+            <a href="#">Départ à Tahiti</a>
+            <div class="from">
+              <img src="./assets/img/forum/3.jpg" alt="3" />
+              Par <a href="#">Piritua A</a> • 3 réponses
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="list-do">
+        <h2>Splendides espaces verts</h2>
+        <div class="elements">
+          <div class="card">
+            <a href="#">
+              <img
+                src="./assets/img/verts/jardin-des-tuileries.jpg"
+                alt="Jardins des Tuileries"
+              />
+              <div class="title">Jardins des Tuileries</div>
+              <div class="notation" data-note="4.5">7 523</div>
+              <div class="category">Jardins</div>
+              <i class="far fa-heart"></i>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img
+                src="./assets/img/verts/coulee-verte-rene-dumont.jpg"
+                alt="Parc des Buttes-Chaumont"
+              />
+              <div class="title">Parc des Buttes-Chaumont</div>
+              <div class="notation" data-note="4.5">2 058</div>
+              <div class="category">Parcs</div>
+              <i class="far fa-heart"></i>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img src="./assets/img/verts/vosges.jpg" alt="Parc des Vosges" />
+              <div class="title">Parc des Vosges</div>
+              <div class="notation" data-note="4.5">5 662</div>
+              <div class="category">Monuments et Points d'intérêt</div>
+              <i class="far fa-heart"></i>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img
+                src="./assets/img/verts/parc-monceau.jpg"
+                alt="Parc Monceau"
+              />
+              <div class="title">Parc Monceau</div>
+              <div class="notation" data-note="4.5">1 018</div>
+              <div class="category">Parcs</div>
+              <i class="far fa-heart"></i>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img
+                src="./assets/img/verts/coulee-verte-rene-dumont.jpg"
+                alt="Coulée Verte René-Dumont"
+              />
+              <div class="title">Coulée Verte René-Dumont</div>
+              <div class="notation" data-note="4.5">896</div>
+              <div class="category">Jardins, Parcs</div>
+              <i class="far fa-heart"></i>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      Made at <a href="https://www.lereacteur.io/">Le Reacteur</a> by
+      <a href="https://github.com/Revine-dev/">Rémi</a> - 2021
+    </footer>
   </body>
 </html>

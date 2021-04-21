@@ -2,6 +2,11 @@
 /*  -------    GENERAL    -------
 /* -----------------------------*/
 
+:root {
+  --green: #008000;
+  --beige: #faf1ed;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -31,6 +36,29 @@ a {
 
 p {
   overflow: hidden;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Trip Sans Bold";
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Trip Sans Bold";
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  font-family: "Trip Sans Bold";
+  margin-bottom: 15px;
+}
+
+section a:not(.btn):not(.plain):hover {
+  text-decoration: underline;
 }
 
 .link.blackbutton {
@@ -50,12 +78,33 @@ p {
   background: #333333;
 }
 
+section + section {
+  margin-top: 50px;
+}
+
+.card img:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s linear;
+}
+
+a.location {
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* ------------------------------
 /*  -------    HEADER     -------
 /* -----------------------------*/
 
 header {
-  margin-bottom: 50px !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 9;
 }
 
 header nav {
@@ -74,16 +123,30 @@ header #logo img {
   margin-right: 28px;
 }
 
+header .search-group {
+  align-self: center;
+  position: relative;
+}
+
 header .search {
   font-size: 16px;
   height: 38px;
   line-height: 38px;
   padding: 0 0 0 31px;
-  align-self: center;
-  text-overflow: ellipsis;
   outline: none;
   box-shadow: none;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  width: 340px;
 }
+
+header .search-group .icon,
+header .search-group .fas {
+  position: absolute;
+  left: 11px;
+  top: 13px;
+}
+
 header .links {
   width: 100%;
   display: flex;
@@ -106,10 +169,8 @@ header .link {
   border-radius: 20px;
   padding: 6px;
   transition: background-color 0.1s linear, border-color 0.1s linear;
-}
-
-header .link.blackbutton {
-  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 header .link:hover {
@@ -130,8 +191,11 @@ header .link .fa {
 /*  -------     MAIN     -------
 /* -----------------------------*/
 
-.title {
-  font-family: "Trip Sans VF";
+main {
+  margin-top: 100px !important;
+}
+
+h1.title {
   font-size: 54px;
   line-height: 120%;
   color: #ff5d5d;
@@ -215,6 +279,11 @@ main .title span {
   font-size: 12px;
 }
 
+.gallery .allpictures .icon,
+.gallery .allpictures .fas {
+  margin-right: 4px;
+}
+
 .locate {
   font-size: 12px;
   width: 100%;
@@ -227,6 +296,10 @@ main .title span {
 .city .location {
   display: flex;
   align-items: flex-start;
+}
+
+.city .location a:hover {
+  text-decoration: underline;
 }
 
 .city .location .fas,
@@ -257,8 +330,6 @@ main .title span {
 }
 
 .city .about-city .text h2 {
-  font-family: "Trip Sans VF";
-  font-weight: bold;
   font-size: 28px;
   margin-bottom: 15px;
 }
@@ -287,11 +358,11 @@ main .title span {
 .city .about-city .trip .start h3 {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .city .about-city .trip .start .btn {
-  margin-top: 15px;
+  margin-top: 5px;
   font-size: 16px;
   line-height: 1.8;
   padding-top: 10px;
@@ -299,8 +370,188 @@ main .title span {
 }
 
 .city .about-city .trip img {
-  max-height: 252px;
+  max-height: 190px;
   background: transparent;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.list-do {
+  display: flex;
+}
+
+.list-do > .card {
+  flex: 0 0 300px;
+}
+
+.list-do > .card p {
+  padding-right: 50px;
+}
+
+.list-do > .card a {
+  font-size: 14px;
+}
+
+.elements {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.list-do .elements {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.list-do .elements::-webkit-scrollbar {
+  display: none;
+}
+
+.list-do .elements .card {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 285px;
+  height: 100%;
+}
+
+.card .title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card a:hover .title {
+  text-decoration: underline;
+}
+
+.list-do .card img {
+  height: unset;
+}
+
+.list-do .card .notation {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-flex;
+}
+
+.list-do .card .notation svg {
+  fill: var(--green);
+  margin-right: 5px;
+}
+
+.list-do .card:hover img {
+  opacity: 0.7;
+  transition: opacity 0.3s linear;
+}
+
+.list-do .card .category {
+  font-size: 14px;
+}
+
+.list-do .card .fas,
+.list-do .card .far,
+.list-do .card .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  transition: background-color 0.1s linear, border-color 0.1s linear;
+}
+
+.list-do .card .fas:hover,
+.list-do .card .far:hover,
+.list-do .card .icon:hover {
+  cursor: pointer;
+  background: #f2f2f2;
+}
+
+.list-do .card + .card {
+  margin-left: 15px;
+}
+
+.guide .card {
+  width: 33.33%;
+}
+
+.guide .card img {
+  max-height: 250px;
+}
+
+.guide .card .nb {
+  font-size: 14px;
+}
+
+.guide .card .by {
+  margin-top: 5px;
+}
+
+.guide .card .by img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.guide .elements .card + .card {
+  margin-left: 15px;
+}
+
+.guide .elements .card + .card {
+  margin-left: 15px;
+}
+
+.forum .elements {
+  margin-top: 15px;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.forum .card + .card {
+  margin-left: 20px;
+}
+
+.forum .card {
+  flex: 1;
+  border-radius: 10px;
+  background: var(--beige);
+  padding: 30px;
+}
+
+.forum .card a {
+  font-weight: bold;
+}
+
+.forum .card .from {
+  margin-top: 30px;
+}
+
+.forum .card img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+section.list-do {
+  display: block;
+}
+
+/* ------------------------------
+/*  -------    FOOTER     -------
+/* -----------------------------*/
+
+footer {
+  background: var(--beige);
+  padding: 50px;
+  text-align: center;
 }
