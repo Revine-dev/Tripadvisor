@@ -555,3 +555,7 @@ footer {
   padding: 50px;
   text-align: center;
 }
+
+footer a:hover {
+  text-decoration: underline;
+}
