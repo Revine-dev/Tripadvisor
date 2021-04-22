@@ -35,6 +35,8 @@ a {
 }
 
 p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -94,6 +96,14 @@ a.location {
   justify-content: flex-end;
 }
 
+.fullwidth {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+  /* https://coderwall.com/p/hkgamw/creating-full-width-100-container-inside-fixed-width-container */
+}
+
 /* ------------------------------
 /*  -------    HEADER     -------
 /* -----------------------------*/
@@ -112,6 +122,15 @@ header nav {
   height: 60px;
 }
 
+header #menu {
+  display: none;
+}
+
+header #menu .fas,
+header #menu .icon {
+  cursor: pointer;
+}
+
 header #logo {
   align-self: center;
 }
@@ -126,6 +145,7 @@ header #logo img {
 header .search-group {
   align-self: center;
   position: relative;
+  width: 50%;
 }
 
 header .search {
@@ -137,7 +157,7 @@ header .search {
   box-shadow: none;
   border-radius: 8px;
   border: 2px solid #e0e0e0;
-  width: 340px;
+  width: 100%;
 }
 
 header .search-group .icon,
@@ -228,6 +248,10 @@ main .title span {
   margin-left: 15px;
   display: flex;
   justify-content: space-between;
+}
+
+#activities .activity.ship {
+  display: none;
 }
 
 #activities .activity:hover {
@@ -346,13 +370,12 @@ main .title span {
   flex-direction: column;
   border-radius: 10px;
   margin-bottom: 30px;
+  background-color: #ff5d5d;
+  overflow: hidden;
 }
 
 .city .about-city .trip .start {
   padding: 30px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  background-color: #ff5d5d;
 }
 
 .city .about-city .trip .start h3 {
@@ -369,11 +392,18 @@ main .title span {
   padding-bottom: 10px;
 }
 
-.city .about-city .trip img {
-  max-height: 190px;
-  background: transparent;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+.city .about-city .trip .picture {
+  width: 100%;
+  height: 190px;
+  position: relative;
+}
+
+.city .about-city .trip .picture::after {
+  content: " ";
+  position: absolute;
+  background: url("/assets/img/map.png") white;
+  width: 100%;
+  height: 100%;
 }
 
 .list-do {
@@ -409,10 +439,14 @@ main .title span {
   display: none;
 }
 
+.musthave .elements .card {
+  width: calc((100% / 3) - (30px / 3)) !important;
+}
+
 .list-do .elements .card {
   position: relative;
   flex-shrink: 0;
-  max-width: 285px;
+  width: calc((100% / 4) - (30px / 3));
   height: 100%;
 }
 
@@ -427,6 +461,23 @@ main .title span {
 
 .list-do .card img {
   height: unset;
+  display: block;
+}
+
+.list-do .elements .photo {
+  position: relative;
+}
+
+.elements .card .photo::after {
+  content: " ";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  background: url("../img/trip.svg");
 }
 
 .list-do .card .notation {
