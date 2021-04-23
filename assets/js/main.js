@@ -104,8 +104,6 @@ $.addEventListener("DOMContentLoaded", () => {
       message: $.querySelector('textarea[name="message"]').value,
     };
 
-    console.log(data);
-
     try {
       const response = await axios.post(
         "https://api.mailgun.net/v3/sandbox8721a832a3d549b28f5b0dd7e9c96966.mailgun.org",
