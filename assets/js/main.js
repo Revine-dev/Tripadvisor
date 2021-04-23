@@ -107,11 +107,18 @@ $.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await axios.post(
-        "https://api.mailgun.net/v3/sandbox8721a832a3d549b28f5b0dd7e9c96966.mailgun.org",
+        "https://backend-tripadvisor-clone.herokuapp.com/form",
         data
       );
-      $.querySelector(".modal .modal-body").innerText =
-        "Le mail a bien été envoyé, merci !";
+
+      if (!response.data.result) {
+        return alert(
+          "An error has occured, please contact your administrator."
+        );
+      } else {
+        $.querySelector(".modal .modal-body").innerText =
+          "Le mail a bien été envoyé, merci !";
+      }
     } catch (error) {
       alert("An error has occured.");
     }
