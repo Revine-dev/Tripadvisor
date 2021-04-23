@@ -7,23 +7,20 @@
 
 @media (max-width: 1200px) {
   #activities {
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   #activities .activity {
-    width: calc((100% / 4) - (45px / 4));
-    flex-shrink: 0;
-    flex: unset;
+    flex: inherit;
     margin-bottom: 10px;
     box-sizing: border-box;
+    margin-left: 0;
   }
 
   #activities .activity.ship {
     display: flex;
-  }
-
-  #activities .activity:nth-child(5) {
-    margin-left: 0;
   }
 }
 
@@ -55,15 +52,18 @@
 }
 
 @media (max-width: 768px) {
-  header #menu {
-    display: block;
-    position: absolute;
-    top: 23px;
+  header.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
-  header #logo {
-    justify-content: center;
-    display: flex;
-    width: 100%;
+  header nav {
+    justify-content: space-between;
+  }
+  header #menu {
+    display: inherit;
+    align-self: center;
   }
   header #logo img {
     display: block;
@@ -74,17 +74,17 @@
     display: none;
   }
   header .search-group {
-    position: absolute;
     width: auto;
-    right: 35px;
   }
   header .search {
     display: none;
   }
   header .search-group .icon,
   header .search-group .fas {
-    top: -7px;
     cursor: pointer;
+    position: relative;
+    left: inherit;
+    top: inherit;
   }
 
   .gallery {
@@ -97,6 +97,8 @@
   }
 
   #activities {
+    display: flex;
+    grid-gap: inherit;
     flex-wrap: nowrap;
     overflow: hidden;
     overflow-x: scroll;
@@ -155,6 +157,9 @@
   }
   .guide .elements .card .plain img {
     height: 200px;
+  }
+  .list-do .elements .card {
+    width: calc((100% / 3) - (30px / 3));
   }
 }
 

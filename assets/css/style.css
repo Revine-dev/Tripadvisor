@@ -469,16 +469,25 @@ main .title span {
   position: relative;
 }
 
-.elements .card .photo::after {
-  content: " ";
+.elements .card .photo[data-text]::after {
+  content: attr(data-text);
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background: red;
-  left: 0;
+  width: 33px;
+  height: 40px;
+  left: 10px;
   bottom: 0;
   z-index: 99;
-  background: url("../img/trip.svg");
+  background: url("../img/trip.svg") #34e0a1;
+  background-repeat: no-repeat;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  line-height: 5.56;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .list-do .card .notation {
