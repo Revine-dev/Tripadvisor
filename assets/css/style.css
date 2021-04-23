@@ -231,6 +231,7 @@ main .title span {
   width: 100%;
   flex-direction: row;
   margin-bottom: 30px;
+  position: relative;
 }
 
 #activities .activity:first-of-type {
