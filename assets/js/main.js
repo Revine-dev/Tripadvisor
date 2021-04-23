@@ -54,6 +54,7 @@ $.addEventListener("DOMContentLoaded", () => {
       }
     }
     $.querySelector(".modal.show").classList.remove("show");
+    $.body.classList.remove("modal-open");
   };
 
   window.addEventListener("click", function autoClose(event) {
