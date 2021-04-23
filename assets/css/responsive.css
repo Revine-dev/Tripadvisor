@@ -166,3 +166,43 @@
 @media (max-width: 576px) {
   /* Rules */
 }
+
+/* ------------------------------
+/*  -------     MODAL     -------
+/* -----------------------------*/
+
+@media (min-width: 768px) {
+  .modal .modal-dialog {
+    width: 600px;
+    margin: 20px auto;
+  }
+  .modal .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .modal .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal .modal-lg {
+    width: 900px;
+  }
+}
+@media (min-width: 576px) {
+  .modal .modal-dialog-centered {
+    min-height: calc(100% - (1.75rem * 2));
+  }
+}
+
+@media (min-width: 576px) {
+  .modal .modal-dialog-centered {
+    min-height: calc(100% - (1.75rem * 2));
+  }
+}
+@media (max-height: 550px) {
+  .modal .modal-body {
+    max-height: 350px;
+    overflow-y: auto;
+  }
+}

@@ -14,7 +14,6 @@
       src="https://kit.fontawesome.com/5e8b469dd2.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/style.js"></script>
   </head>
   <body>
     <header class="container">
@@ -476,8 +475,47 @@
       </section>
     </main>
     <footer>
+      <a href="#" id="contact">Contactez-nous</a>
+
       Made at <a href="https://www.lereacteur.io/">Le Reacteur</a> by
       <a href="https://github.com/Revine-dev/">Rémi</a> - 2021
     </footer>
+    <div class="modal" id="modal">
+      <div
+        class="modal-dialog modal-dialog-centered fade-scale"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Envoyer un message</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body center">
+            <form method="post" class="autoform">
+              <input type="text" name="firstname" placeholder="Prénom" />
+              <input type="text" name="lastname" placeholder="Nom" />
+              <input type="email" name="email" placeholder="Adresse mail" />
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Ecrivez votre message"
+              ></textarea>
+              <input type="submit" value="Envoyer" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

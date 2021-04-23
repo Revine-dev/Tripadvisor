@@ -5,6 +5,7 @@
 :root {
   --green: #008000;
   --beige: #faf1ed;
+  --medium-green: #058171;
 }
 
 body {
@@ -617,6 +618,318 @@ footer {
   text-align: center;
 }
 
+footer #contact {
+  display: block;
+  margin-bottom: 15px;
+}
+
 footer a:hover {
   text-decoration: underline;
+}
+
+/* ------------------------------
+/*  -------     MODAL     -------
+/* -----------------------------*/
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  box-sizing: border-box;
+}
+.modal .close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.5;
+  filter: alpha(opacity=20);
+}
+.modal .close:hover,
+.modal .close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+  filter: alpha(opacity=50);
+}
+.modal button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.modal .modal-open {
+  overflow: hidden;
+}
+.modal .modal-content {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.modal .modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s all;
+  -o-transition: -o-transform 0.3s all;
+  transition: transform 0.3s all;
+}
+.modal .modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal .modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal.modal.show .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal .modal-dialog-centered {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: calc(100% - (0.5rem * 2));
+}
+.modal .modal-dialog .modal-header .modal-title {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+.modal .modal-dialog {
+  max-width: 500px;
+  margin: 1.75rem auto;
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+.modal-dialog .modal-header.modal-info {
+  background: #17a2b8;
+  color: white;
+}
+.modal .modal-dialog .modal-header.modal-warning {
+  background: #ffc107;
+}
+.modal .modal-dialog .modal-header.modal-success {
+  background: #28a745;
+  color: white;
+}
+.modal-dialog .modal-header.modal-danger {
+  background: #ef5b5b;
+  color: white;
+}
+.modal .modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.modal .modal-dialog input.form-control,
+.modal-dialog button.btn {
+  margin-top: 10px;
+}
+.modal .btn:hover {
+  cursor: pointer;
+}
+.modal .btn-secondary:hover {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.modal .modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  position: relative;
+}
+.modal .modal-dialog .modal-header .close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+.modal .modal-title {
+  margin: 0;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.modal .modal-body {
+  position: relative;
+  padding: 25px;
+  font-size: 17px;
+  text-align: center;
+}
+.modal .modal-body .icon {
+  width: 10%;
+  vertical-align: middle;
+  font-size: 21px;
+}
+.modal .modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal .modal-footer button + button {
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+.modal .modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal .modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal .btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.modal .modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal .clickable {
+  cursor: pointer;
+}
+.modal.fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.modal.fade-scale.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal.modal.fade-scale.hide {
+  opacity: 0;
+  transform: scale(0);
+  display: block !important;
+}
+
+.fade-scale {
+  animation-duration: 0.25s;
+  animation-name: scale;
+}
+
+.modal.hide {
+  display: none !important;
+}
+.modal.show {
+  display: block !important;
+}
+.modal.invisible {
+  visibility: hidden;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  border: 2px solid var(--medium-green);
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Trip sans";
+  box-sizing: border-box;
+}
+
+.modal .invalid {
+  border-color: red;
+}
+
+.modal input[type="submit"],
+button[type="submit"] {
+  background-color: var(--medium-green);
+  color: white;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.modal input + input,
+.modal input + textarea {
+  margin-top: 10px;
 }
