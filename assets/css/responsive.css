@@ -186,6 +186,10 @@
   .list-do .elements .card {
     width: calc((100% / 3) - (30px / 3));
   }
+
+  .forum .card {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 576px) {

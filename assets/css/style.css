@@ -15,6 +15,10 @@ body {
   font-family: "Trip Sans";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1184px;
   margin: auto;

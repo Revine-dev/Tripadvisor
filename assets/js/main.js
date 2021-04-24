@@ -73,18 +73,19 @@ $.addEventListener("DOMContentLoaded", () => {
   $.querySelectorAll(".elements-content .fas, .elements-content .icon").forEach(
     (element) => {
       element.addEventListener("click", () => {
-        const el = $.querySelector(".elements-content .elements"),
-          cards = element.parentElement.querySelectorAll(".card"),
-          cardWidth = cards[0].clientWidth,
-          nbCards = $.querySelectorAll(".elements-content .card").length,
-          currentScroll = el.scrollLeft,
-          totalScroll = el.scrollLeftMax,
-          nbVisibleCards = Math.round(el.clientWidth / cardWidth),
-          containerWidth = cardWidth * nbVisibleCards;
+        const el = element.parentElement.querySelector(".elements");
+        (cards = element.parentElement.querySelectorAll(".card")),
+          (cardWidth = cards[0].clientWidth),
+          (currentScroll = el.scrollLeft),
+          (totalScroll = el.scrollLeftMax),
+          (nbVisibleCards = Math.round(el.clientWidth / cardWidth)),
+          (spaces =
+            (cards[1].offsetLeft - cards[1].offsetWidth) * nbVisibleCards),
+          (containerWidth = cardWidth * nbVisibleCards + spaces);
 
         if (element.classList.contains("next")) {
           for (let i = 0; i < cards.length; i++) {
-            if (currentScroll + containerWidth < cards[i].offsetLeft) {
+            if (currentScroll + containerWidth <= cards[i].offsetLeft) {
               cards[i].scrollIntoView({
                 behavior: "smooth",
                 block: "end",
