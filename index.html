@@ -53,6 +53,9 @@
           <span>Explorer </span><span class="black">Paris</span>
         </h1>
         <nav id="activities">
+          <a href="#lastActivity" class="scroll hide">
+            <i class="fas fa-chevron-right scroll"></i>
+          </a>
           <a href="#" class="activity">
             <div>Hôtels</div>
             <i class="fas fa-hotel"></i>
@@ -81,7 +84,7 @@
             <div>Croisières</div>
             <i class="fas fa-ship"></i>
           </a>
-          <a href="#" class="activity">
+          <a href="#" class="activity" id="lastActivity">
             <div>Plus</div>
             <i class="fas fa-ellipsis-h"></i>
           </a>
@@ -157,157 +160,161 @@
             </p>
             <a href="#">Tout afficher</a>
           </div>
-          <div class="elements">
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/eiffel.jpg"
-                    alt="Tour Eiffel"
-                  />
-                </div>
-                <div class="title">Tour Eiffel</div>
-                <div class="notation" data-note="4.5">140 249</div>
-                <div class="category">
-                  Tours et plateformes d'observation, Monuments & Points
-                  d'intérêt
-                </div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/louvre.jpg"
-                    alt="Musée du Louvre"
-                  />
-                </div>
-                <div class="title">Musée du Louvre</div>
-                <div class="notation" data-note="4.5">100 864</div>
-                <div class="category">
-                  Bâtiments architecturaux, Musées d'art
-                </div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/triomphe.jpg"
-                    alt="Arc de Triomphe"
-                  />
-                </div>
-                <div class="title">Arc de Triomphe</div>
-                <div class="notation" data-note="4.5">45 099</div>
-                <div class="category">
-                  Bâtiments architecturaux, Sites historiques
-                </div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/rodin.jpg"
-                    alt="Musée Rodin"
-                  />
-                </div>
-                <div class="title">Musée Rodin</div>
-                <div class="notation" data-note="4.5">12 456</div>
-                <div class="category">Musée spécialisés</div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/notre-dame.jpg"
-                    alt="Cathédrale Notre Dame"
-                  />
-                </div>
-                <div class="title">Cathédrale Notre Dame</div>
-                <div class="notation" data-note="4.5">71 250</div>
-                <div class="category">
-                  Bâtiments architecturaux, Sites historiques
-                </div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/shakespeare.jpg"
-                    alt="Librairie Shakespeare and Company"
-                  />
-                </div>
-                <div class="title">Librairie Shakespeare and Company</div>
-                <div class="notation" data-note="4.5">3 920</div>
-                <div class="category">Bibliothèque, Grands Magasins</div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/orsay.jpg"
-                    alt="Musée d'Orsay"
-                  />
-                </div>
-                <div class="title">Musée d'Orsay</div>
-                <div class="notation" data-note="4.5">65 171</div>
-                <div class="category">Category</div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/puces.jpg"
-                    alt="Marché aux Puces de St Ouen"
-                  />
-                </div>
-                <div class="title">Marché aux Puces de St Ouen</div>
-                <div class="notation" data-note="4">864</div>
-                <div class="category">
-                  Antiquaires, Marchés aux puces & Marché de rues
-                </div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/basilica.jpg"
-                    alt="Basilique du Sacré Coeur"
-                  />
-                </div>
-                <div class="title">Basilique du Sacré Coeur</div>
-                <div class="notation" data-note="4.5">38 637</div>
-                <div class="category">Eglises et cathédrale</div>
-                <i class="far fa-heart"></i>
-              </a>
-            </div>
-            <div class="card">
-              <a href="#" class="plain">
-                <div class="photo" data-text="2021">
-                  <img
-                    src="./assets/img/divertir/tuileries.jpg"
-                    alt="Jardin des Tuileries"
-                  />
-                </div>
-                <div class="title">Jardin des Tuileries</div>
-                <div class="notation" data-note="4.5">7 253</div>
-                <div class="category">Jardins</div>
-                <i class="far fa-heart"></i>
-              </a>
+          <div class="elements-content">
+            <i class="fas fa-arrow-left previous"></i>
+            <i class="fas fa-arrow-right next"></i>
+            <div class="elements">
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/eiffel.jpg"
+                      alt="Tour Eiffel"
+                    />
+                  </div>
+                  <div class="title">Tour Eiffel</div>
+                  <div class="notation" data-note="4.5">140 249</div>
+                  <div class="category">
+                    Tours et plateformes d'observation, Monuments & Points
+                    d'intérêt
+                  </div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/louvre.jpg"
+                      alt="Musée du Louvre"
+                    />
+                  </div>
+                  <div class="title">Musée du Louvre</div>
+                  <div class="notation" data-note="4.5">100 864</div>
+                  <div class="category">
+                    Bâtiments architecturaux, Musées d'art
+                  </div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/triomphe.jpg"
+                      alt="Arc de Triomphe"
+                    />
+                  </div>
+                  <div class="title">Arc de Triomphe</div>
+                  <div class="notation" data-note="4.5">45 099</div>
+                  <div class="category">
+                    Bâtiments architecturaux, Sites historiques
+                  </div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/rodin.jpg"
+                      alt="Musée Rodin"
+                    />
+                  </div>
+                  <div class="title">Musée Rodin</div>
+                  <div class="notation" data-note="4.5">12 456</div>
+                  <div class="category">Musée spécialisés</div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/notre-dame.jpg"
+                      alt="Cathédrale Notre Dame"
+                    />
+                  </div>
+                  <div class="title">Cathédrale Notre Dame</div>
+                  <div class="notation" data-note="4.5">71 250</div>
+                  <div class="category">
+                    Bâtiments architecturaux, Sites historiques
+                  </div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/shakespeare.jpg"
+                      alt="Librairie Shakespeare and Company"
+                    />
+                  </div>
+                  <div class="title">Librairie Shakespeare and Company</div>
+                  <div class="notation" data-note="4.5">3 920</div>
+                  <div class="category">Bibliothèque, Grands Magasins</div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/orsay.jpg"
+                      alt="Musée d'Orsay"
+                    />
+                  </div>
+                  <div class="title">Musée d'Orsay</div>
+                  <div class="notation" data-note="4.5">65 171</div>
+                  <div class="category">Category</div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/puces.jpg"
+                      alt="Marché aux Puces de St Ouen"
+                    />
+                  </div>
+                  <div class="title">Marché aux Puces de St Ouen</div>
+                  <div class="notation" data-note="4">864</div>
+                  <div class="category">
+                    Antiquaires, Marchés aux puces & Marché de rues
+                  </div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/basilica.jpg"
+                      alt="Basilique du Sacré Coeur"
+                    />
+                  </div>
+                  <div class="title">Basilique du Sacré Coeur</div>
+                  <div class="notation" data-note="4.5">38 637</div>
+                  <div class="category">Eglises et cathédrale</div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#" class="plain">
+                  <div class="photo" data-text="2021">
+                    <img
+                      src="./assets/img/divertir/tuileries.jpg"
+                      alt="Jardin des Tuileries"
+                    />
+                  </div>
+                  <div class="title">Jardin des Tuileries</div>
+                  <div class="notation" data-note="4.5">7 253</div>
+                  <div class="category">Jardins</div>
+                  <i class="far fa-heart"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -400,76 +407,80 @@
       </section>
       <section class="list-do">
         <h2>Splendides espaces verts</h2>
-        <div class="elements">
-          <div class="card">
-            <a href="#">
-              <div class="photo" data-text="2021">
-                <img
-                  src="./assets/img/verts/jardin-des-tuileries.jpg"
-                  alt="Jardins des Tuileries"
-                />
-              </div>
-              <div class="title">Jardins des Tuileries</div>
-              <div class="notation" data-note="4.5">7 523</div>
-              <div class="category">Jardins</div>
-              <i class="far fa-heart"></i>
-            </a>
-          </div>
-          <div class="card">
-            <a href="#">
-              <div class="photo" data-text="2021">
-                <img
-                  src="./assets/img/verts/coulee-verte-rene-dumont.jpg"
-                  alt="Parc des Buttes-Chaumont"
-                />
-              </div>
-              <div class="title">Parc des Buttes-Chaumont</div>
-              <div class="notation" data-note="4.5">2 058</div>
-              <div class="category">Parcs</div>
-              <i class="far fa-heart"></i>
-            </a>
-          </div>
-          <div class="card">
-            <a href="#">
-              <div class="photo" data-text="2021">
-                <img
-                  src="./assets/img/verts/vosges.jpg"
-                  alt="Parc des Vosges"
-                />
-              </div>
-              <div class="title">Parc des Vosges</div>
-              <div class="notation" data-note="4.5">5 662</div>
-              <div class="category">Monuments et Points d'intérêt</div>
-              <i class="far fa-heart"></i>
-            </a>
-          </div>
-          <div class="card">
-            <a href="#">
-              <div class="photo" data-text="2021">
-                <img
-                  src="./assets/img/verts/parc-monceau.jpg"
-                  alt="Parc Monceau"
-                />
-              </div>
-              <div class="title">Parc Monceau</div>
-              <div class="notation" data-note="4.5">1 018</div>
-              <div class="category">Parcs</div>
-              <i class="far fa-heart"></i>
-            </a>
-          </div>
-          <div class="card">
-            <a href="#">
-              <div class="photo" data-text="2021">
-                <img
-                  src="./assets/img/verts/coulee-verte-rene-dumont.jpg"
-                  alt="Coulée Verte René-Dumont"
-                />
-              </div>
-              <div class="title">Coulée Verte René-Dumont</div>
-              <div class="notation" data-note="4.5">896</div>
-              <div class="category">Jardins, Parcs</div>
-              <i class="far fa-heart"></i>
-            </a>
+        <div class="elements-content">
+          <i class="fas fa-arrow-left previous"></i>
+          <i class="fas fa-arrow-right next"></i>
+          <div class="elements">
+            <div class="card">
+              <a href="#">
+                <div class="photo" data-text="2021">
+                  <img
+                    src="./assets/img/verts/jardin-des-tuileries.jpg"
+                    alt="Jardins des Tuileries"
+                  />
+                </div>
+                <div class="title">Jardins des Tuileries</div>
+                <div class="notation" data-note="4.5">7 523</div>
+                <div class="category">Jardins</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+                <div class="photo" data-text="2021">
+                  <img
+                    src="./assets/img/verts/coulee-verte-rene-dumont.jpg"
+                    alt="Parc des Buttes-Chaumont"
+                  />
+                </div>
+                <div class="title">Parc des Buttes-Chaumont</div>
+                <div class="notation" data-note="4.5">2 058</div>
+                <div class="category">Parcs</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+                <div class="photo" data-text="2021">
+                  <img
+                    src="./assets/img/verts/vosges.jpg"
+                    alt="Parc des Vosges"
+                  />
+                </div>
+                <div class="title">Parc des Vosges</div>
+                <div class="notation" data-note="4.5">5 662</div>
+                <div class="category">Monuments et Points d'intérêt</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+                <div class="photo" data-text="2021">
+                  <img
+                    src="./assets/img/verts/parc-monceau.jpg"
+                    alt="Parc Monceau"
+                  />
+                </div>
+                <div class="title">Parc Monceau</div>
+                <div class="notation" data-note="4.5">1 018</div>
+                <div class="category">Parcs</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+                <div class="photo" data-text="2021">
+                  <img
+                    src="./assets/img/verts/coulee-verte-rene-dumont.jpg"
+                    alt="Coulée Verte René-Dumont"
+                  />
+                </div>
+                <div class="title">Coulée Verte René-Dumont</div>
+                <div class="notation" data-note="4.5">896</div>
+                <div class="category">Jardins, Parcs</div>
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
           </div>
         </div>
       </section>

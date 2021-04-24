@@ -24,6 +24,99 @@ $.addEventListener("DOMContentLoaded", () => {
     element.innerHTML = result + element.innerHTML;
   });
 
+  const autoHideArrows = (elements) => {
+    if (elements) {
+      elements = elements.querySelectorAll(".fas, .icon");
+    } else {
+      elements = $.querySelectorAll(
+        ".elements-content .fas, .elements-content .icon"
+      );
+    }
+
+    elements.forEach((arrow) => {
+      const el = elements[0].parentElement.querySelector(".elements"),
+        currentScroll = el.scrollLeft,
+        maxScroll = el.scrollLeftMax;
+
+      if (
+        arrow.classList.contains("next") &&
+        currentScroll === maxScroll &&
+        !arrow.classList.contains("hide")
+      ) {
+        arrow.classList.add("hide");
+      } else if (
+        arrow.classList.contains("next") &&
+        currentScroll < maxScroll &&
+        arrow.classList.contains("hide")
+      ) {
+        arrow.classList.remove("hide");
+      }
+
+      if (
+        arrow.classList.contains("previous") &&
+        currentScroll === 0 &&
+        !arrow.classList.contains("hide")
+      ) {
+        arrow.classList.add("hide");
+      } else if (
+        arrow.classList.contains("previous") &&
+        currentScroll > 0 &&
+        arrow.classList.contains("hide")
+      ) {
+        arrow.classList.remove("hide");
+      }
+    });
+  };
+
+  autoHideArrows();
+
+  $.querySelectorAll(".elements-content .fas, .elements-content .icon").forEach(
+    (element) => {
+      element.addEventListener("click", () => {
+        const el = $.querySelector(".elements-content .elements"),
+          cards = element.parentElement.querySelectorAll(".card"),
+          cardWidth = cards[0].clientWidth,
+          nbCards = $.querySelectorAll(".elements-content .card").length,
+          currentScroll = el.scrollLeft,
+          totalScroll = el.scrollLeftMax,
+          nbVisibleCards = Math.round(el.clientWidth / cardWidth),
+          containerWidth = cardWidth * nbVisibleCards;
+
+        if (element.classList.contains("next")) {
+          for (let i = 0; i < cards.length; i++) {
+            if (currentScroll + containerWidth < cards[i].offsetLeft) {
+              cards[i].scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+                inline: "nearest",
+              });
+              break;
+            }
+          }
+        }
+
+        if (element.classList.contains("previous")) {
+          for (let i = cards.length - 1; i >= 0; i--) {
+            if (cards[i].offsetLeft < currentScroll) {
+              cards[i].scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+                inline: "nearest",
+              });
+              break;
+            }
+          }
+        }
+      });
+    }
+  );
+
+  $.querySelectorAll(".elements-content .elements").forEach((carousel) => {
+    carousel.addEventListener("scroll", (e) => {
+      autoHideArrows(carousel.parentElement);
+    });
+  });
+
   $.querySelector("#contact").addEventListener("click", (e) => {
     e.preventDefault();
     $.body.classList.add("modal-open");
