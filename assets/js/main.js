@@ -84,6 +84,12 @@ $.addEventListener("DOMContentLoaded", () => {
           (containerWidth = cardWidth * nbVisibleCards + spaces);
 
         if (element.classList.contains("next")) {
+          if (
+            currentScroll + containerWidth === el.scrollWidth &&
+            !element.classList.contains("hide")
+          ) {
+            return element.classList.add("hide");
+          }
           for (let i = 0; i < cards.length; i++) {
             if (currentScroll + containerWidth <= cards[i].offsetLeft) {
               cards[i].scrollIntoView({
@@ -93,10 +99,20 @@ $.addEventListener("DOMContentLoaded", () => {
               });
               break;
             }
+            if (i === cards.length - 1) {
+              cards[i].scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+                inline: "nearest",
+              });
+            }
           }
         }
 
         if (element.classList.contains("previous")) {
+          if (currentScroll === 0 && !element.classList.contains("hide")) {
+            return element.classList.add("hide");
+          }
           for (let i = cards.length - 1; i >= 0; i--) {
             if (cards[i].offsetLeft < currentScroll) {
               cards[i].scrollIntoView({
