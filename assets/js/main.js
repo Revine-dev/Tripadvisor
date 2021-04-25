@@ -36,17 +36,17 @@ $.addEventListener("DOMContentLoaded", () => {
     elements.forEach((arrow) => {
       const el = elements[0].parentElement.querySelector(".elements"),
         currentScroll = el.scrollLeft,
-        maxScroll = el.scrollLeftMax;
+        maxScrollLeft = el.scrollWidth - el.clientWidth;
 
       if (
         arrow.classList.contains("next") &&
-        currentScroll === maxScroll &&
+        currentScroll === maxScrollLeft &&
         !arrow.classList.contains("hide")
       ) {
         arrow.classList.add("hide");
       } else if (
         arrow.classList.contains("next") &&
-        currentScroll < maxScroll &&
+        currentScroll < maxScrollLeft &&
         arrow.classList.contains("hide")
       ) {
         arrow.classList.remove("hide");

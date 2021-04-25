@@ -6,6 +6,7 @@
   --green: #008000;
   --beige: #faf1ed;
   --medium-green: #058171;
+  --max-size-blocks: 700px;
 }
 
 body {
@@ -279,6 +280,7 @@ main .title span {
 
 .gallery img {
   cursor: pointer;
+  max-width: var(--max-size-blocks);
   transition: opacity 0.3s linear;
 }
 
@@ -299,6 +301,11 @@ main .title span {
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.gallery .photos img {
+  max-height: 50%;
 }
 
 .gallery .allpictures {
@@ -361,6 +368,7 @@ main .title span {
 
 .city .about-city .text {
   flex: 1.5;
+  max-width: var(--max-size-blocks);
 }
 
 .city .about-city .text h2 {
