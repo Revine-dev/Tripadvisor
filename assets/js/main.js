@@ -1,6 +1,10 @@
 const $ = document;
 
 $.addEventListener("DOMContentLoaded", () => {
+  /* ------------------------------
+  /*      AUTOMATIC REVIEWS
+  /* -----------------------------*/
+
   $.querySelectorAll(".notation[data-note]").forEach((element) => {
     let result =
         '<svg aria-label="" class="zWXXYhVR" height="12" viewBox="0 0 68 12" width=68>',
@@ -23,6 +27,10 @@ $.addEventListener("DOMContentLoaded", () => {
     result += "</svg>";
     element.innerHTML = result + element.innerHTML;
   });
+
+  /* ------------------------------
+  /*      ARROWS SYSTEM
+  /* -----------------------------*/
 
   const autoHideArrows = (elements) => {
     if (elements) {
@@ -128,6 +136,10 @@ $.addEventListener("DOMContentLoaded", () => {
     }
   );
 
+  /* ------------------------------
+  /*             MODAL
+  /* -----------------------------*/
+
   $.querySelectorAll(".elements-content .elements").forEach((carousel) => {
     carousel.addEventListener("scroll", (e) => {
       autoHideArrows(carousel.parentElement);
@@ -191,6 +203,10 @@ $.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ------------------------------
+  /*             FORM
+  /* -----------------------------*/
+
   $.querySelector(".modal form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -199,8 +215,17 @@ $.addEventListener("DOMContentLoaded", () => {
       if (element.getAttribute("type") !== "submit" && !element.value) {
         isEmpty = true;
         element.classList.add("invalid");
+        console.log(element.nextSibling.nodeName);
+        if (element.nextSibling.nodeName !== "SPAN") {
+          const errorSpan = document.createElement("span");
+          errorSpan.innerText = "Ce champ doit être rempli.";
+          element.parentNode.insertBefore(errorSpan, element.nextSibling);
+        }
       } else if (element.classList.contains("invalid")) {
         element.classList.remove("invalid");
+        if (element.nextSibling.nodeName === "SPAN") {
+          element.nextSibling.remove();
+        }
       }
     });
 

@@ -975,6 +975,19 @@ body.modal-open {
   box-sizing: border-box;
 }
 
+.modal input + span,
+.modal textarea + span {
+  display: block;
+  color: red;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.modal input + span:not(:last-of-type),
+.modal textarea + span:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
 .modal .invalid {
   border-color: red;
 }
