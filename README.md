@@ -6,10 +6,14 @@ Reproduction of Tripadvisor
 
 📱 Responsive : ✅
 
-🖥 Languages : ![html-5](https://user-images.githubusercontent.com/59733143/123622673-d0401580-d80c-11eb-8bfd-8affe1e5587f.png)  ![4202020css3htmllogosocialsocialmedia-115668_115633](https://user-images.githubusercontent.com/59733143/123622669-cfa77f00-d80c-11eb-95fb-820cfdf871f7.png) ![javascript_icon_130900](https://user-images.githubusercontent.com/59733143/123622675-d0401580-d80c-11eb-838e-3ee69a7a1676.png)
-
+🖥 Languages : 
+[![HTML](https://user-images.githubusercontent.com/59733143/123686859-8b3dd280-d850-11eb-94e7-eb44c8179dcc.png)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+[![CSS](https://user-images.githubusercontent.com/59733143/123686862-8bd66900-d850-11eb-97c5-1cb2889aaf39.png)](https://developer.mozilla.org/en-US/docs/Glossary/CSS)
+[![JS](https://user-images.githubusercontent.com/59733143/123686864-8bd66900-d850-11eb-8e60-807ae3c1e8b0.png)](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
 
 🎙 Live version : https://awesome-goldberg-1da884.netlify.app/
+
+⚒ Features : Modal with contact form
 
 ## Overview :
 
