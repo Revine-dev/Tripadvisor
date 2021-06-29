@@ -17,14 +17,23 @@ Reproduction of Tripadvisor
 
 ## Overview :
 
-- Mobile version: 
+* [Mobile version](#mobile-version)
+* [Computer version](#computer-version)
+* [Slider](#slider)
+* [Modal](#modal)
+
+## Mobile version: 
 
 ![Screenshot 2021-06-28 at 12-10-41 Tripadvisor](https://user-images.githubusercontent.com/59733143/123619878-e7c9cf00-d809-11eb-81a6-83aec8ca5290.png)
 
-- Computer version:
+## Computer version:
 
 ![Screenshot 2021-06-28 at 12-10-15 Tripadvisor](https://user-images.githubusercontent.com/59733143/123619896-edbfb000-d809-11eb-85d7-a0bf9515f900.png)
 
-- Modal:
+## Slider:
+
+![slider-gif](https://user-images.githubusercontent.com/59733143/123789285-4dd35680-d8dd-11eb-93e2-4c78aed771f8.gif)
+
+## Modal:
 
 ![Capture d’écran 2021-06-28 à 12 16 03](https://user-images.githubusercontent.com/59733143/123621248-4cd1f480-d80b-11eb-9aa4-ed973ebef78e.png)
